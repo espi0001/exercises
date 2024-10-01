@@ -1,10 +1,83 @@
-ul {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 1rem;
+/* Generelle reset-styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Style til main container */
+main {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 30px;
+}
+
+
 li {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #ffffff;
+    padding: 15px;
     list-style-type: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border: 1px solid #727272;
+    color: #2c3e50;
+}
+
+/* Style til første række */
+ul li:nth-child(-n+7) {
+    background-color: #588A87;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Hover-effekt */
+ul li:nth-child(n+8):hover {
+    background-color: #b6cebe;
+    color: white;
+    transform: scale(1.05);
+    border: 1px solid #b6cebe;
+}
+
+/* Style til knapper */
+.knapper {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.knapper button {
+    background-color: #b6cebe;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.knapper button:hover {
+
+    transform: translateY(-5px);
+}
+
+.knapper button:active {
+    transform: translateY(0);
 }
