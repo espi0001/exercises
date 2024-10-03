@@ -1,4 +1,5 @@
 const name = "Klaus";
-const dogName = "Mona";
+const animalType = "dog";
+const animalName = "Mona";
 
-console.log("My name is " + name + ", i have a dog called " + dogName);
+console.log("My name is " + name + ",\nI have a " + animalType + " called " + animalName);
