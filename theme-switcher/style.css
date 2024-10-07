@@ -1,0 +1,56 @@
+/* Slippe for den grimme(?) blå focus på knappen  */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+.dark {
+    background-color: #121212;
+    --text-color: #f0f0f0;
+    --button-color: #333;
+    --button-hover-color: #555;
+    --button-active-color: #777;
+    --button-text-color: #f0f0f0;
+    --button-border-color: #333;
+    --button-border-width: 1px;
+    --button-border-radius: 4px;
+    --button-padding: 8px 16px;
+    --button-margin: 8px;
+    --button-font-size: 16px;
+    --button-font-weight: 600
+}
+
+.light {
+    --background-color: #f0f0f0;
+    --text-color: #121212;
+    --button-color: #ccc;
+    --button-hover-color: #aaa;
+    --button-active-color: #999;
+    --button-text-color: #121212;
+    --button-border-color: #ccc;
+    --button-border-width: 1px;
+    --button-border-radius: 4px;
+    --button-padding: 8px 16px;
+    --button-margin: 8px;
+    --button-font-size: 16px;
+    --button-font-weight: 600
+}
+
+.hawaii {
+    --background-color: yellow;
+    --text-color: #121212;
+    --button-color: #ccc;
+    --button-hover-color: #aaa;
+    --button-active-color: #999;
+    --button-text-color: #121212;
+    --button-border-color: #ccc;
+    --button-border-width: 1px;
+    --button-border-radius: 4px;
+    --button-padding: 8px 16px;
+    --button-margin: 8px;
+    --button-font-size: 16px;
+    --button-font-weight: 600
+}
