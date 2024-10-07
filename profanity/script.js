@@ -15,11 +15,11 @@ function replaceBadWords() {
 
   if (theSentenceHasBeenTreated === false) {
     curseWords.forEach((curseWord) => {
-      theText = theText.replaceAll(curseWord.bad, curseWord.good);
+      theText = theText.replaceAll(curseWord.bad, `<span>${curseWord.good}</span>`);
     });
 
     console.log("theText", theText);
-    document.querySelector("p").textContent = theText;
+    document.querySelector("p").innerHTML = theText;
     theSentenceHasBeenTreated = true;
   } else {
     document.querySelector("dialog").showModal();
