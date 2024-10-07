@@ -4,8 +4,24 @@ const curseWords = [
   { bad: "marquee", good: "just don't" },
 ];
 
+let theSentenceHasBeenTreated = false;
+
+let theText = document.querySelector("p").textContent;
+
 document.querySelector("button").addEventListener("click", replaceBadWords);
 
 function replaceBadWords() {
-  console.log("REPLACE");
+  //console.log("REPLACE", theText);
+
+  if (theSentenceHasBeenTreated === false) {
+    curseWords.forEach((curseWord) => {
+      theText = theText.replaceAll(curseWord.bad, curseWord.good);
+    });
+
+    console.log("theText", theText);
+    document.querySelector("p").textContent = theText;
+    theSentenceHasBeenTreated = true;
+  } else {
+    document.querySelector("dialog").showModal();
+  }
 }
