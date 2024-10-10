@@ -1,0 +1,23 @@
+/* Definerer CSS-variabler for hue, saturation og lightness */
+:root {
+    /* Farvetone (H) er sat fast til 200 grader (blå nuance) */
+    --hue: 200;
+    /* Standard mætning (S) */
+    --saturation: 50%;
+    /* Standard lysstyrke (L) */
+    --lightness: 50%;
+}
+
+/* Body-stil: Baggrundsfarve styres af HSL og CSS-variabler */
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), var(--saturation), var(--lightness));
+    transition: background-color 0.1s ease;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 24px;
+}
