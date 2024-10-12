@@ -1,0 +1,44 @@
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        transition: background-color 0.5s ease;
+    }
+
+    .button {
+        position: relative;
+        padding: 20px 40px;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+        color: white;
+        background-color: transparent;
+        border: 2px solid #007BFF;
+        border-radius: 5px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #007BFF;
+        z-index: -1;
+        transition: width 5s linear;
+        /* Animation der varer 5 sekunder */
+    }
+
+    /* Når animationen er aktiv */
+    .button.animate::before {
+        width: 100%;
+    }
+
+    .hidden {
+        display: none;
+    }
